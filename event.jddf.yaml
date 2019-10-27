@@ -1,0 +1,19 @@
+discriminator:
+  tag: type
+  mapping:
+    Heartbeat:
+      properties: &base
+        userId:
+          type: string
+        timestamp:
+          type: timestamp
+    Order Completed:
+      properties:
+        <<: *base
+        revenue:
+          type: float64
+    Page Viewed:
+      properties:
+        <<: *base
+        url:
+          type: string
