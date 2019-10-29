@@ -473,7 +473,7 @@ func (s *server) getLTV(w http.ResponseWriter, r *http.Request, _ httprouter.Par
 
 	events := make([]event.Event, len(dbEvents))
 	for i, dbEvent := range dbEvents {
-    // No possibility of errors here.
+		// No possibility of errors here.
 		json.Unmarshal(dbEvent.Payload, &events[i])
 	}
 
