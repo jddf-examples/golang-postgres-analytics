@@ -304,7 +304,7 @@ For internal purposes, that might be fine. But if you're shipping this API to
 customers, you're going to want an approach that:
 
 1. Returns _all_ the validation errors with the request. [`encoding/json` only
-   returns the first error.](https://play.golang.org/p/qp561bFsLQN).
+   returns the first error](https://play.golang.org/p/qp561bFsLQN).
 2. Returns errors in a portable way. Otherwise, you can't rename the fields of
    your Golang structs, because customers will come to depend on parts of your
    error message like `WidgetRequest.id`.
